@@ -1,0 +1,529 @@
+/*
+Theme Name: Guy Radcliffe Photos (bloggr)
+Theme URI: https://guyradcliffe.com
+Author: Guy Radcliffe
+Author URI: https://guyradcliffe.com
+Description: Dev theme being built for guyradcliffe.com
+
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  transition: background-color .5s; }
+  body figure {
+    margin: 0;
+    padding: 0; }
+  body ul {
+    margin: 0;
+    padding: 0; }
+    body ul li {
+      margin: 0;
+      padding: 0; }
+
+@font-face {
+  /* lato thin italic */
+  font-family: 'latothin_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-thinitalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-thinitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato thin */
+  font-family: 'latothin';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-thin-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato semibold italic */
+  font-family: 'latosemibold_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-semibolditalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato semibold */
+  font-family: 'latosemibold';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-semibold-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato regular */
+  font-family: 'latoregular';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-regular-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato medium */
+  font-family: 'latomedium';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-medium-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato medium italic */
+  font-family: 'latomedium_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-mediumitalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato light italic */
+  font-family: 'latolight_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-lightitalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato light */
+  font-family: 'latolight';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-light-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato italic */
+  font-family: 'latoitalic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-italic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato heavy italic */
+  font-family: 'latoheavy_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-heavyitalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-heavyitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato heavy */
+  font-family: 'latoheavy';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-heavy-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato hairline italic */
+  font-family: 'latohairline_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-hairlineitalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-hairlineitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato bold italic */
+  font-family: 'latobold_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-bolditalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato bold */
+  font-family: 'latobold';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-bold-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato black italic */
+  font-family: 'latoblack_italic';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-blackitalic-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  /* lato black */
+  font-family: 'latoblack';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/lato-black-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/lato-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'fontinregular';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/fontin-regular-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/fontin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'fontinbold';
+  src: url("https://photos.guyradcliffe.com/wp-content/fonts/fontin-bold-webfont.woff2") format("woff2"), url("https://photos.guyradcliffe.com/wp-content/fonts/fontin-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: "fontinregular";
+  color: #aeaeae; }
+
+a {
+  text-decoration: none;
+  color: #d6d6d6; }
+
+a:hover {
+  color: #fff;
+  text-decoration: underline; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: .5em;
+  margin-top: 0;
+  font-family: "fontinregular";
+  padding: 0; }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500; }
+
+h1,
+.h1 {
+  font-size: 2rem; }
+
+h2,
+.h2 {
+  font-size: 1.6rem; }
+
+h3,
+.h3 {
+  font-size: 1.4rem; }
+
+h4,
+.h4 {
+  font-size: 1.2rem; }
+
+h5,
+.h5 {
+  font-size: 1rem; }
+
+h6,
+.h6 {
+  font-size: .8rem; }
+
+p {
+  margin: 0 0 1.2rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: normal;
+  position: relative;
+  text-transform: none;
+  font-family: "fontinregular";
+  line-height: 1.5; }
+
+blockquote {
+  border-left: 0.1rem solid #3c3c3c;
+  margin-left: 0;
+  padding: 0.4rem 0.8rem; }
+  blockquote p:last-child {
+    margin-bottom: 0; }
+
+.site-title {
+  text-transform: none;
+  font-family: "fontinbold"; }
+
+.site-title a,
+.site-description {
+  text-shadow: 2px 2px #000; }
+
+.container .entry-footer .cat-links, .container .entry-footer .tags-links {
+  font-size: 11px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  letter-spacing: normal;
+  position: relative;
+  text-transform: none;
+  font-family: "fontinregular"; }
+.container .entry-footer .cat-links a, .container .entry-footer .tags-links a {
+  color: #aeaeae; }
+
+body.lb-disable-scrolling {
+  overflow: hidden; }
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none; }
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none; }
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+  /* Image border */
+  border: 4px solid white; }
+
+.lightbox a img {
+  border: none; }
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white; }
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0; }
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(https://bibleillustrated.site/wp-content/themes/blankslate/images/loading.gif) no-repeat; }
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10; }
+
+.lb-container > .nav {
+  left: 0; }
+
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="); }
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block; }
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(https://bibleillustrated.site/wp-content/themes/blankslate/images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(https://bibleillustrated.site/wp-content/themes/blankslate/images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc; }
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em; }
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em; }
+
+.lb-data .lb-caption a {
+  color: #4ae; }
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999; }
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(https://bibleillustrated.site/wp-content/themes/blankslate/images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+#imagestyle {
+  transition: opacity .5s;
+  width: 100vw;
+  object-fit: cover;
+  height: 275px;
+  object-position: 0% 30%; }
+
+#menuBtn {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #fff;
+  color: #000;
+  padding: 15px 12px;
+  box-sizing: border-box;
+  font-weight: 900; }
+
+#sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+  #sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; }
+  #sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; }
+  #sidebar a:hover {
+    color: #f1f1f1; }
+  #sidebar #primary ul li, #sidebar #primary ul li h3 {
+    color: #818181; }
+  #sidebar #primary ul li {
+    list-style: none; }
+  #sidebar #primary ul.xoxo {
+    margin: 0;
+    padding: 0; }
+    #sidebar #primary ul.xoxo li h3 {
+      font-size: 21px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding-left: 12px;
+      margin-bottom: 0; }
+    #sidebar #primary ul.xoxo li ul {
+      margin: 0;
+      padding: 0; }
+    #sidebar #primary ul.xoxo .widget_meta, #sidebar #primary ul.xoxo .widget_recent_comments {
+      display: none; }
+  #sidebar #menu .menu {
+    list-style: none; }
+
+#wrapper {
+  width: 100vw;
+  transition: margin-left,color .5s; }
+  #wrapper #header {
+    width: 100vw;
+    display: block; }
+    #wrapper #header img {
+      width: inherit; }
+  #wrapper #container, #wrapper #footer {
+    width: 80vw;
+    margin: 0 auto; }
+    #wrapper #container .entry-content, #wrapper #footer .entry-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em; }
+      #wrapper #container .entry-content .col .thumb, #wrapper #footer .entry-content .col .thumb {
+        width: inherit; }
+        #wrapper #container .entry-content .col .thumb img, #wrapper #footer .entry-content .col .thumb img {
+          width: 100%;
+          height: auto; }
+    #wrapper #container .entry-summary, #wrapper #footer .entry-summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em; }
+      #wrapper #container .entry-summary .col .thumb, #wrapper #footer .entry-summary .col .thumb {
+        width: inherit; }
+        #wrapper #container .entry-summary .col .thumb img, #wrapper #footer .entry-summary .col .thumb img {
+          width: 100%;
+          height: auto; }
+
+.home #wrapper #container, .home #wrapper #footer {
+  max-width: 600px; }
+  .home #wrapper #container .entry-summary, .home #wrapper #footer .entry-summary {
+    grid-template-columns: 1fr; }
+
+@media screen and (max-width: 550px) {
+  #wrapper #container .entry-content {
+    grid-template-columns: 1fr; } }
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+
+/*# sourceMappingURL=style.css.map */

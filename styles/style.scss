@@ -1,0 +1,24 @@
+/*
+Theme Name: Guy Radcliffe Photos (bloggr)
+Theme URI: https://guyradcliffe.com
+Author: Guy Radcliffe
+Author URI: https://guyradcliffe.com
+Description: Dev theme being built for guyradcliffe.com
+
+*/
+
+// Variables and mixins
+@import "variables";
+
+// Reset and dependencies
+@import "base";
+
+// Elements
+@import "typography";
+
+// Layout
+@import "lightbox";
+@import "hero";
+@import "navbar";
+@import "layout";
+
