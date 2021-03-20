@@ -8,7 +8,3 @@
 </main>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-<script>
-let imgPath = "https://photos.guyradcliffe.com/wp-content/uploads/2018/07/20180714_192954.jpg";
-let altTag = "Guy Radcliffe Photos";
-</script>
