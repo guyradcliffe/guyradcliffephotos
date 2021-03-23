@@ -1,4 +1,12 @@
 <?php
+function loadHead() { ?>
+
+    <link rel="stylesheet" href="https://photos.guyradcliffe.com/wp-content/themes/guyradcliffetheme/style.css">
+    <link rel="icon" href="https://photos.guyradcliffe.com/wp-content/themes/guyradcliffetheme/favicon.png" type="image/png">
+    <meta name="yandex-verification" content="e4829e78b7bf55fd" />
+    <!-- alexa needed -->
+    <!-- bing needed -->
+<?php }
 add_action( 'after_setup_theme', 'blankslate_setup' );
 function blankslate_setup() {
 //load_theme_textdomain( 'blankslate', get_template_directory() . '/languages' );
@@ -7,17 +15,24 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', array( 'search-form' ) );
 global $content_width;
+//remove_filter ('the_excerpt', 'wpautop');
+remove_filter ('the_content', 'wpautop');
+remove_filter('term_description','wpautop');
 if ( ! isset( $content_width ) ) { $content_width = 1920; }
 register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'blankslate' ) ) );
 }
 
-function loadHead() {
-    echo '<link rel="stylesheet" href="https://photos.guyradcliffe.com/wp-content/themes/bloggr/style.css">' . PHP_EOL;
-}
-
+//stuff to load into footer.php
 function loadFooter() {
-    echo '<script src="https://photos.guyradcliffe.com/wp-content/themes/bloggr/app.js" async defer></script>' . PHP_EOL;
-}
+    if ( !(is_front_page()) || !(is_home()) || !(is_front_page()) && !(is_home()) ) {
+        // if not home page, show getElementById and innerHTML;
+        // imgPath and altTag defined in each blog post to change header image for each post except home page ?>
+        <script>
+            document.getElementById("header").innerHTML = "<img src='" + imgPath + "' alt='" + altTag + "' id='imagestyle'><span id='menuBtn' onclick='openNav()'>&#9776;</span>";
+        </script>
+    <?php } ?>
+    <script src="https://photos.guyradcliffe.com/wp-content/themes/guyradcliffetheme/app.js" async defer></script>
+<?php } // closes loadFooter()
 
 add_filter( 'document_title_separator', 'blankslate_document_title_separator' );
 function blankslate_document_title_separator( $sep ) {
@@ -62,7 +77,7 @@ register_sidebar( array(
 ) );
 }
 //add_action( 'wp_head', 'blankslate_pingback_header' );
-add_action( 'blankslate_pingback_header' );
+add_action( '', 'blankslate_pingback_header' );
 function blankslate_pingback_header() {
 if ( is_singular() && pings_open() ) {
 printf( '<link rel="pingback" href="%s" />' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
@@ -79,6 +94,28 @@ function blankslate_custom_pings( $comment ) {
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
 <?php
 }
+// remove bloat from wp_head
+remove_action('wp_print_styles', 'print_emoji_styles');//removes printed emoji css
+remove_action('wp_head', 'print_emoji_detection_script', 7); //removes printed emoji js
+remove_action('admin_print_scripts', 'print_emoji_detection_script'); //removes printed emoji js
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+remove_action('wp_head', 'https://api.w.org/');
+remove_action('wp_head', 'rest_output_link_wp_head');// removes json
+remove_action('wp_head', 'wp_oembed_add_discovery_links');// removes json
+
+add_action( 'wp_enqueue_scripts', 'remove_stylesheets', 20 );
+function remove_stylesheets() {
+    wp_dequeue_style( 'wp-block-library' );// removes default wp stylesheet
+    wp_deregister_style( 'wp-block-library' );// removes default wp stylesheet
+    wp_dequeue_style( 'contact-form-7' );// removes contact form 7 stylesheet
+    wp_deregister_style( 'contact-form-7' );// removes contact form 7 stylesheet
+}
+// end remove bloat from wp_head
 add_filter( 'get_comments_number', 'blankslate_comment_count', 0 );
 function blankslate_comment_count( $count ) {
 if ( ! is_admin() ) {
